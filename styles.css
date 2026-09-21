@@ -308,3 +308,16 @@ p { margin-top: 0; margin-bottom: 20px; }
   position: relative !important;
   z-index: 2 !important;
 }
+
+/* === MOBILE HEADER FIX === */
+@media (max-width: 900px) {
+  .header {
+    position: relative !important; /* Hace que el menú se mueva hacia arriba y desaparezca al hacer scroll en celular */
+  }
+  .brand img {
+    width: 200px !important; /* Un poco más pequeño en celular para que no ocupe toda la pantalla inicial */
+  }
+  .header-inner {
+    padding: 10px 0 !important;
+  }
+}
