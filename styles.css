@@ -321,3 +321,65 @@ p { margin-top: 0; margin-bottom: 20px; }
     padding: 10px 0 !important;
   }
 }
+
+/* === ACCORDION: CONSERVACIÓN Y DISTRIBUCIÓN === */
+.tech-specs {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-top: 50px !important;
+  padding: 20px 0 !important;
+}
+.tech-specs summary {
+  font-family: var(--font-heading) !important;
+  font-weight: 700 !important;
+  font-size: 1.3rem !important;
+  color: var(--red) !important;
+  cursor: pointer !important;
+  list-style: none !important; 
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  user-select: none !important;
+}
+.tech-specs summary::-webkit-details-marker {
+  display: none !important; 
+}
+.tech-specs summary::before {
+  content: '▼' !important;
+  font-size: 0.8rem !important;
+  transition: transform 0.3s ease !important;
+}
+.tech-specs[open] summary::before {
+  transform: rotate(-180deg) !important;
+}
+.specs-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 40px !important;
+  margin-top: 30px !important;
+  padding-bottom: 10px !important;
+}
+.specs-col h4 {
+  font-family: var(--font-body) !important;
+  font-weight: 600 !important;
+  font-size: 1.1rem !important;
+  margin-bottom: 15px !important;
+  color: var(--ink) !important;
+}
+.specs-col ul {
+  padding-left: 20px !important;
+  color: var(--muted) !important;
+  font-size: 0.95rem !important;
+  margin: 0 !important;
+}
+.specs-col ul li {
+  margin-bottom: 15px !important;
+  line-height: 1.6 !important;
+}
+
+@media (max-width: 768px) {
+  .specs-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
